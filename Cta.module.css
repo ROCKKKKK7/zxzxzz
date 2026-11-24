@@ -1,0 +1,149 @@
+.cta {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: max(440px, 41vw);
+  padding: 48px var(--page-padding);
+  overflow: hidden;
+  color: var(--color-white);
+  background: #1c1c1c;
+}
+
+.image {
+  object-fit: cover;
+  object-position: 25% 30%;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    270deg,
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0) 60%
+  );
+}
+
+.side {
+  position: absolute;
+  left: var(--page-padding);
+  bottom: 64px;
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+.dash {
+  width: 26px;
+  height: 2px;
+  margin-top: 12px;
+  background: var(--color-white);
+}
+
+.content {
+  position: relative;
+  width: min(100%, 520px);
+  margin-right: 4%;
+}
+
+.title {
+  margin-bottom: 16px;
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.text {
+  margin-bottom: 26px;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.form {
+  display: flex;
+  gap: 10px;
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  height: 52px;
+  padding: 0 20px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.25);
+  color: var(--color-white);
+  font-size: 0.85rem;
+}
+
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.input:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: 2px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  height: 52px;
+  padding: 0 22px;
+  border: none;
+  border-radius: 2px;
+  background: var(--color-white);
+  color: var(--color-text);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #dcdcdc;
+}
+
+@media (max-width: 768px) {
+  .cta {
+    align-items: flex-end;
+    justify-content: flex-start;
+    min-height: 560px;
+  }
+
+  .image {
+    object-position: 30% 20%;
+  }
+
+  .overlay {
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0) 75%
+    );
+  }
+
+  .side {
+    display: none;
+  }
+
+  .content {
+    margin-right: 0;
+  }
+
+  .form {
+    flex-direction: column;
+  }
+
+  .button {
+    justify-content: center;
+  }
+}
